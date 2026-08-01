@@ -1,0 +1,324 @@
+:root {
+  --bg: #0a0a0a;
+  --fg: #ededed;
+  --muted: #7d7d7d;
+  --faint: #4a4a4a;
+  --line: #1f1f1f;
+  --accent: #d2a24c;
+
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  --column: 40rem;
+  --step: 1.5rem;
+
+  /* Consumed by Shiki's css-variables theme for code blocks. */
+  --astro-code-color-text: #ededed;
+  --astro-code-color-background: #101010;
+  --astro-code-token-comment: #5c5c5c;
+  --astro-code-token-keyword: #d2a24c;
+  --astro-code-token-string: #9db4a0;
+  --astro-code-token-function: #cfcfcf;
+  --astro-code-token-constant: #c7b8a1;
+  --astro-code-token-punctuation: #7d7d7d;
+  --astro-code-token-parameter: #ededed;
+  --astro-code-token-string-expression: #9db4a0;
+  --astro-code-token-link: #d2a24c;
+
+  color-scheme: dark;
+}
+
+/*
+ * Dark is unconditional, not a response to the system preference. The site is
+ * designed as a dark object; a light variant would be a second design, not a
+ * palette swap. Add one here behind a [data-theme] hook if a toggle ever ships.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.shell {
+  max-width: var(--column);
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--faint);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---- header ---- */
+
+.masthead {
+  margin-bottom: 3.5rem;
+}
+
+.tagline {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  max-width: 34rem;
+}
+
+/* ---- post index ---- */
+
+.year {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+  margin: 2.5rem 0 0.75rem;
+}
+
+.year:first-of-type {
+  margin-top: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.row a {
+  text-decoration: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.row time {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  color: var(--faint);
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- post page ---- */
+
+.post-title {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.post-meta {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  color: var(--faint);
+  margin: 0.6rem 0 2.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.prose > *:first-child {
+  margin-top: 0;
+}
+
+.prose h2,
+.prose h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin: 2.25rem 0 0.75rem;
+}
+
+.prose h2 {
+  font-size: 1.125rem;
+}
+
+.prose h3 {
+  font-size: 1rem;
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0 0 1.15rem;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 0.35rem;
+}
+
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--line);
+  color: var(--muted);
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.5rem 0;
+}
+
+.prose code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  background: var(--line);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+.prose pre {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  margin: 0 0 1.15rem;
+}
+
+.prose th,
+.prose td {
+  text-align: left;
+  padding: 0.4rem 0.75rem 0.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---- footer ---- */
+
+.footer {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--faint);
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+/* ---- 404 ---- */
+
+.notfound {
+  padding: 4rem 0;
+}
+
+.notfound-code {
+  font-family: var(--mono);
+  font-size: clamp(3.5rem, 18vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: var(--faint);
+}
+
+.notfound-code span,
+.notfound-code em {
+  display: block;
+  font-style: normal;
+}
+
+.notfound-code em {
+  color: var(--accent);
+}
+
+.notfound p {
+  color: var(--muted);
+  margin: 1.25rem 0 0;
+  max-width: 28rem;
+}
+
+@media (max-width: 34rem) {
+  .shell {
+    padding-top: 3rem;
+  }
+
+  .row {
+    gap: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

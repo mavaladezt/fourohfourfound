@@ -1,0 +1,43 @@
+---
+/**
+ * Placeholder wordmark.
+ *
+ * This is deliberately plain — the real studio logo replaces the contents of
+ * this file and nothing else. Everything that renders a logo imports this
+ * component, so the swap is one file.
+ */
+interface Props {
+  /** Renders as a link back to the index unless this is already the index. */
+  home?: boolean;
+}
+
+const { home = false } = Astro.props;
+const Tag = home ? 'span' : 'a';
+---
+
+<Tag class="logo" {...home ? {} : { href: '/' }}>
+  <span class="logo-dim">fourohfour</span><span class="logo-lit">found</span>
+</Tag>
+
+<style>
+  .logo {
+    font-family: var(--mono);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .logo-dim {
+    color: var(--muted);
+  }
+
+  .logo-lit {
+    color: var(--fg);
+  }
+
+  a.logo:hover .logo-lit {
+    color: var(--accent);
+  }
+</style>

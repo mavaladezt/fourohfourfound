@@ -1,0 +1,48 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { formatDate, isoDate, year } from '../lib/date';
+
+// Drafts stay visible in `astro dev` and are stripped from production builds.
+const posts = (
+  await getCollection('posts', ({ data }) =>
+    import.meta.env.PROD ? !data.draft : true
+  )
+).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const groups = new Map<number, CollectionEntry<'posts'>[]>();
+for (const post of posts) {
+  const y = year(post.data.date);
+  if (!groups.has(y)) groups.set(y, []);
+  groups.get(y)!.push(post);
+}
+---
+
+<Base home>
+  <p slot="intro" class="tagline">
+    A studio notebook. Things built, things measured, things that turned out
+    differently than expected.
+  </p>
+
+  {
+    posts.length === 0 ? (
+      <p class="tagline">Nothing published yet.</p>
+    ) : (
+      [...groups].map(([y, entries]) => (
+        <>
+          <h2 class="year">{y}</h2>
+          <ul class="list">
+            {entries.map((post) => (
+              <li class="row">
+                <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+                <time datetime={isoDate(post.data.date)}>
+                  {formatDate(post.data.date)}
+                </time>
+              </li>
+            ))}
+          </ul>
+        </>
+      ))
+    )
+  }
+</Base>
