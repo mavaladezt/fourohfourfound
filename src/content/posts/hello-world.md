@@ -1,6 +1,6 @@
 ---
 title: Hello world
-date: 2026-08-01
+date: 2026-07-31
 description: The blog is up and running.
 ---
 
