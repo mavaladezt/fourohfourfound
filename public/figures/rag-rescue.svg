@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 188" width="640" height="188" role="img" aria-label="Fact questions answered, of 18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<text x="0" y="16" fill="#ededed" font-size="14" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >Fact questions answered, of 18</text>
+<text x="0" y="36" fill="#7d7d7d" font-size="12" text-anchor="start" font-weight="400" style="font-variant-numeric:tabular-nums" >A compressed 1.5B with a library beats an uncompressed 3B from memory — at 9× smaller.</text>
+<text x="184" y="71.68" fill="#7d7d7d" font-size="12.5" text-anchor="end" font-weight="400" style="font-variant-numeric:tabular-nums" >1.5B · 2-bit, closed-book</text>
+<rect x="196" y="54" width="366" height="26" fill="#151515" rx="2"/>
+<rect x="196" y="54" width="101.7" height="26" fill="#3d3d3d" rx="2"/>
+<text x="572" y="71.68" fill="#ededed" font-size="13" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >5/18</text>
+<text x="184" y="113.68" fill="#7d7d7d" font-size="12.5" text-anchor="end" font-weight="400" style="font-variant-numeric:tabular-nums" >1.5B · 2-bit + 1.1 MB library</text>
+<rect x="196" y="96" width="366" height="26" fill="#151515" rx="2"/>
+<rect x="196" y="96" width="366.0" height="26" fill="#d2a24c" rx="2"/>
+<text x="572" y="113.68" fill="#d2a24c" font-size="13" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >18/18</text>
+<text x="184" y="155.68" fill="#7d7d7d" font-size="12.5" text-anchor="end" font-weight="400" style="font-variant-numeric:tabular-nums" >3B · FP16, closed-book</text>
+<rect x="196" y="138" width="366" height="26" fill="#151515" rx="2"/>
+<rect x="196" y="138" width="325.3" height="26" fill="#3d3d3d" rx="2"/>
+<text x="572" y="155.68" fill="#ededed" font-size="13" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >16/18</text>
+</svg>

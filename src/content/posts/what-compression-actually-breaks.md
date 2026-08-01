@@ -47,11 +47,10 @@ Then we asked whether size protects you. The industry intuition is that bigger m
 compression more gracefully. We ran the harshest setting across three sizes of one model
 family:
 
-| Model size | Perplexity damage at 2-bit (full-corpus) |
-|---|---|
-| 0.5B | +10.0% |
-| 1.5B | **+51.1%** |
-| 3B | +37.1% |
+<figure>
+  <img src="/figures/scale-damage.svg" alt="Perplexity damage at 2-bit: 0.5B +10.0%, 1.5B +51.1%, 3B +37.1%." />
+  <figcaption>Perplexity damage at 2-bit: 0.5B +10.0%, 1.5B +51.1%, 3B +37.1%.</figcaption>
+</figure>
 
 Damage *grew* with scale below 7B, and non-monotonically. The smallest model was the least
 damaged of the three. "Bigger quantizes easier" is method-specific folklore, not a law — and
@@ -107,10 +106,10 @@ That asymmetry suggests an architecture, so we tested it. We attached a local do
 store — 1.1 MB, smaller than one photo — to compressed models and re-asked the fact
 questions they had failed closed-book:
 
-| 1.5B model, 2-bit | Fact questions (of 18) |
-|---|---|
-| Closed-book | 5/18 |
-| **+ library** | **18/18** |
+<figure>
+  <img src="/figures/rag-rescue.svg" alt="Fact questions of 18: 1.5B at 2-bit scores 5 closed-book and 18 with a 1.1 MB library; an uncompressed 3B scores 16 from memory." />
+  <figcaption>Fact questions of 18: 1.5B at 2-bit scores 5 closed-book and 18 with a 1.1 MB library; an uncompressed 3B scores 16 from memory.</figcaption>
+</figure>
 
 That compressed 1.5B, with its 1.1 MB library, beats the full-precision **3B** model's own
 closed-book memory (16/18) at 9× smaller. The same rescue held at 3B and at 27B scale. Cost:
@@ -137,11 +136,10 @@ queries — that are all measurable, and none of which are answered by the model
 The same lesson appears in working memory. Every conversation sits in a KV cache, separate
 from the weights, and it can be compressed too. At 4-bit working memory:
 
-| Model | Score of 18 |
-|---|---|
-| 3B · 2-bit weights | **1/18** (from 18/18 at 8-bit) |
-| 8B · 4-bit weights | 15/18 (from 17) |
-| 27B · 1-bit hybrid | 13/18 (unmoved) |
+<figure>
+  <img src="/figures/kv-inversion.svg" alt="Score of 18 with 4-bit working memory: 3B at 2-bit collapses to 1, 8B at 4-bit holds at 15, the 27B 1-bit hybrid is unmoved at 13." />
+  <figcaption>Score of 18 with 4-bit working memory: 3B at 2-bit collapses to 1, 8B at 4-bit holds at 15, the 27B 1-bit hybrid is unmoved at 13.</figcaption>
+</figure>
 
 The hardest-compressed model collapses outright; the mildly compressed one wobbles; the
 hybrid-attention flagship doesn't notice. **Tolerance for compressing working memory inverts
@@ -162,6 +160,11 @@ predictions locked beforehand. It repaired **44% of the damage on perplexity —
 as fast as the ability anyone actually wants. That 2:1 gap is the finding, and it means a
 published retention percentage systematically flatters the model that earned it.
 
+<figure>
+  <img src="/figures/recovery-2to1.svg" alt="Share of 2-bit damage repaired by $3-9 of recovery training: perplexity 44%, the real exam 20-40%, facts 0%." />
+  <figcaption>Share of 2-bit damage repaired by $3-9 of recovery training: perplexity 44%, the real exam 20-40%, facts 0%.</figcaption>
+</figure>
+
 Then the thread from Part 2 paid out. We reran the full audit on additional hardware:
 
 - **390 / 390 answers byte-identical** on a second Apple machine — same backend, same ISA.
@@ -174,10 +177,10 @@ Quality conclusions travel between similar machines and **stop at the vendor bou
 Energy never travelled at all. Same files, same software, two Apple machines one generation
 apart (SoC-estimate tokens/joule, same-device A/B only):
 
-| | FP16 | Q4 | Q2 |
-|---|---|---|---|
-| M5 | 5.02 | 4.56 | **4.01** — shrinking makes it faster but *less* efficient |
-| M4 | 1.98 | 3.56 | **3.78** — shrinking makes it faster *and more* efficient |
+<figure>
+  <img src="/figures/energy-inversion.svg" alt="Tokens per joule across FP16, Q4 and Q2: the M5 falls 5.02 to 4.01 while the M4 rises 1.98 to 3.78." />
+  <figcaption>Tokens per joule across FP16, Q4 and Q2: the M5 falls 5.02 to 4.01 while the M4 rises 1.98 to 3.78.</figcaption>
+</figure>
 
 The efficiency verdict inverts between two chips from the same vendor.
 

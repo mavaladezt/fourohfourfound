@@ -322,3 +322,26 @@ a:hover {
     scroll-behavior: auto !important;
   }
 }
+
+/* ---- figures ---- */
+
+/*
+ * Charts are static SVG in the site palette -- no chart library, no JS.
+ * They carry their own intrinsic width (640px, the column width), so the
+ * rule below only has to handle the narrower-than-column case.
+ */
+.prose figure {
+  margin: 1.75rem 0;
+}
+
+.prose figure img {
+  width: 100%;
+  border-radius: 0;
+}
+
+.prose figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
