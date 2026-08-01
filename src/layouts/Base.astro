@@ -59,5 +59,19 @@ const year = new Date().getUTCFullYear();
         <a href="/rss.xml">RSS</a>
       </footer>
     </div>
+
+    <script>
+      import posthog from 'posthog-js';
+
+      // Pageviews only: autocapture and session recording are off, so the
+      // site stays light and no click/DOM data leaves the browser.
+      posthog.init('phc_nNSomFhVgb8ByA88sfgRQS6BnbymD887fCx9MhUqeR4V', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        disable_session_recording: true,
+        capture_pageview: true,
+        persistence: 'localStorage',
+      });
+    </script>
   </body>
 </html>
