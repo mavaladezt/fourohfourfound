@@ -55,7 +55,7 @@ src/
   layouts/Base.astro Page shell, <head>, header, footer
   components/
     Logo.astro       Wordmark — placeholder, see below
-  styles/global.css  Every visual decision lives here
+  styles/global.css  Palette, type, spacing — nearly all styling
   lib/date.ts        MM/DD/YYYY formatting
 public/              Copied to the site root verbatim
 ```
