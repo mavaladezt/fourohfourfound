@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 272" width="640" height="272" role="img" aria-label="Score of 78, fast-answer mode" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<text x="0" y="16" fill="#ededed" font-size="14" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >Score of 78, fast-answer mode</text>
+<text x="0" y="36" fill="#7d7d7d" font-size="12" text-anchor="start" font-weight="400" style="font-variant-numeric:tabular-nums" >One instrument, one run budget — the flagship trails, and an ordinary 8B matches the original.</text>
+<text x="184" y="71.68" fill="#7d7d7d" font-size="12.5" text-anchor="end" font-weight="400" style="font-variant-numeric:tabular-nums" >Uncompressed original (Q4)</text>
+<rect x="196" y="54" width="366" height="26" fill="#151515" rx="2"/>
+<rect x="196" y="54" width="314.4" height="26" fill="#3d3d3d" rx="2"/>
+<text x="572" y="71.68" fill="#ededed" font-size="13" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >67</text>
+<text x="184" y="113.68" fill="#7d7d7d" font-size="12.5" text-anchor="end" font-weight="400" style="font-variant-numeric:tabular-nums" >Conventional 8B at 4-bit</text>
+<rect x="196" y="96" width="366" height="26" fill="#151515" rx="2"/>
+<rect x="196" y="96" width="314.4" height="26" fill="#3d3d3d" rx="2"/>
+<text x="572" y="113.68" fill="#ededed" font-size="13" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >67</text>
+<text x="184" y="155.68" fill="#7d7d7d" font-size="12.5" text-anchor="end" font-weight="400" style="font-variant-numeric:tabular-nums" >Ternary edition (7.6 GB)</text>
+<rect x="196" y="138" width="366" height="26" fill="#151515" rx="2"/>
+<rect x="196" y="138" width="305.0" height="26" fill="#3d3d3d" rx="2"/>
+<text x="572" y="155.68" fill="#ededed" font-size="13" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >65</text>
+<text x="184" y="197.68" fill="#7d7d7d" font-size="12.5" text-anchor="end" font-weight="400" style="font-variant-numeric:tabular-nums" >Conventional 2-bit quant</text>
+<rect x="196" y="180" width="366" height="26" fill="#151515" rx="2"/>
+<rect x="196" y="180" width="267.5" height="26" fill="#3d3d3d" rx="2"/>
+<text x="572" y="197.68" fill="#ededed" font-size="13" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >57</text>
+<text x="184" y="239.68" fill="#7d7d7d" font-size="12.5" text-anchor="end" font-weight="400" style="font-variant-numeric:tabular-nums" >1-bit flagship (3.8 GB)</text>
+<rect x="196" y="222" width="366" height="26" fill="#151515" rx="2"/>
+<rect x="196" y="222" width="262.8" height="26" fill="#d2a24c" rx="2"/>
+<text x="572" y="239.68" fill="#d2a24c" font-size="13" text-anchor="start" font-weight="600" style="font-variant-numeric:tabular-nums" >56</text>
+</svg>
