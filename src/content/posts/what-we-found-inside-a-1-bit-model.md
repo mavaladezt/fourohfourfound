@@ -49,15 +49,21 @@ On our hardware, running the plain model with no acceleration tricks, we measure
 
 ## Part 2 — Two products, two verdicts
 
-The ternary edition had been accused online of gaming its benchmark — of looking good on the
-scoreboard and bad in practice.
+The ternary edition's reputation rested on the vendor's own benchmark table, and the first
+independent signals didn't obviously match it: a community Terminal-Bench 2.0 run put it at
+7.9%, *below* a 9B reference model at 9.2%. A 27-billion-parameter model losing to a 9B is
+the kind of result that makes people wonder whether a scoreboard is measuring anything.
 
-We tested the accusation and it doesn't hold. Most of the apparent gap is a distribution-shift
-illusion: the model was recovery-trained on a different mix of text than the corpus everyone
-scores it on, which inflates the damage the standard metric reports. On real tasks it clearly
-beats a conventional compression of the same size, at 19% fewer bytes. **Cleared of gaming.**
+Two explanations were available. Either its benchmark numbers were inflated, or the standard
+metric was unfair to it. We tested which.
 
-But cleared is not the same as equal. On our harder 200-question exam, the ternary model sits
+**It's the second.** Most of the apparent gap is a distribution-shift illusion: the model was
+recovery-trained on a different mix of text than the corpus everyone scores it on, which
+inflates the damage the standard metric reports. On real tasks it clearly beats a conventional
+compression of the same size, at 19% fewer bytes. Its benchmark standing survives contact with
+independent measurement.
+
+But surviving is not the same as equal. On our harder 200-question exam, the ternary model sits
 7 points below the uncompressed original (p = 0.007) — a real gap, and one that our first,
 easier instrument had missed entirely.
 
