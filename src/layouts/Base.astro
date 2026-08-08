@@ -7,6 +7,8 @@ interface Props {
   description?: string;
   /** True on the index, where the wordmark should not link to itself. */
   home?: boolean;
+  /** True on pages that are not real destinations, like the 404 handler. */
+  noindex?: boolean;
 }
 
 const SITE_NAME = 'fourohfourfound studio';
@@ -16,6 +18,7 @@ const {
   title,
   description = DEFAULT_DESCRIPTION,
   home = false,
+  noindex = false,
 } = Astro.props;
 
 const pageTitle = title ? `${title} — ${SITE_NAME}` : SITE_NAME;
@@ -30,7 +33,10 @@ const year = new Date().getUTCFullYear();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {/* A noindex page has no canonical URL of its own to point at. */}
+    {noindex
+      ? <meta name="robots" content="noindex" />
+      : <link rel="canonical" href={canonical} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate" type="application/rss+xml" title={SITE_NAME} href="/rss.xml" />
 
