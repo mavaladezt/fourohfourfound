@@ -2,7 +2,7 @@
 <rect width="100%" height="100%" fill="#0a0a0a"/>
 <style>text{font-family:system-ui,sans-serif;fill:#ededed}.grid{stroke:#1f1f1f}</style>
 <text x="380" y="22" text-anchor="middle" font-size="18" font-weight="600">Paired validation-loss differences</text>
-<line x1="470.0" y1="35" x2="470.0" y2="305" stroke="#111827" stroke-width="1.5"/>
+<line x1="470.0" y1="35" x2="470.0" y2="305" stroke="#ededed" stroke-width="1.5"/>
 <text x="208" y="110" text-anchor="end" font-size="14">8-bit AdamW − AdamW</text>
 <circle cx="288.5" cy="89" r="5" fill="#5b8def" opacity=".65"/>
 <circle cx="311.6" cy="105" r="5" fill="#5b8def" opacity=".65"/>
