@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450">
+<rect width="100%" height="100%" fill="#0a0a0a"/>
+<style>text{font-family:system-ui,sans-serif;fill:#ededed}.grid{stroke:#1f1f1f}</style>
+<text x="450" y="25" text-anchor="middle" font-size="18" font-weight="600">Persistent optimizer state versus peak allocated VRAM</text>
+<line class="grid" x1="80" y1="375.0" x2="870" y2="375.0"/>
+<text x="70" y="379.0" text-anchor="end" font-size="12">0</text>
+<line class="grid" x1="80" y1="309.0" x2="870" y2="309.0"/>
+<text x="70" y="313.0" text-anchor="end" font-size="12">174</text>
+<line class="grid" x1="80" y1="243.0" x2="870" y2="243.0"/>
+<text x="70" y="247.0" text-anchor="end" font-size="12">348</text>
+<line class="grid" x1="80" y1="177.0" x2="870" y2="177.0"/>
+<text x="70" y="181.0" text-anchor="end" font-size="12">522</text>
+<line class="grid" x1="80" y1="111.0" x2="870" y2="111.0"/>
+<text x="70" y="115.0" text-anchor="end" font-size="12">696</text>
+<line class="grid" x1="80" y1="45.0" x2="870" y2="45.0"/>
+<text x="70" y="49.0" text-anchor="end" font-size="12">870</text>
+<rect x="123.4" y="332.8" width="55.3" height="42.2" fill="#7d7d7d" opacity="1.0"/>
+<text x="151.1" y="326.8" text-anchor="middle" font-size="11">111</text>
+<rect x="178.8" y="80.4" width="55.3" height="294.6" fill="#7d7d7d" opacity="0.35"/>
+<text x="206.4" y="74.4" text-anchor="middle" font-size="11">776</text>
+<text x="178.8" y="399" text-anchor="middle" font-size="13">AdamW</text>
+<rect x="320.9" y="364.2" width="55.3" height="10.8" fill="#5b8def" opacity="1.0"/>
+<text x="348.6" y="358.2" text-anchor="middle" font-size="11">28</text>
+<rect x="376.2" y="112.4" width="55.3" height="262.6" fill="#5b8def" opacity="0.35"/>
+<text x="403.9" y="106.4" text-anchor="middle" font-size="11">692</text>
+<text x="376.2" y="399" text-anchor="middle" font-size="13">8-bit AdamW</text>
+<rect x="518.5" y="353.3" width="55.3" height="21.7" fill="#e09b3d" opacity="1.0"/>
+<text x="546.1" y="347.3" text-anchor="middle" font-size="11">57</text>
+<rect x="573.8" y="100.3" width="55.3" height="274.7" fill="#e09b3d" opacity="0.35"/>
+<text x="601.4" y="94.3" text-anchor="middle" font-size="11">724</text>
+<text x="573.8" y="399" text-anchor="middle" font-size="13">Muon</text>
+<rect x="716.0" y="353.2" width="55.3" height="21.8" fill="#2fb37e" opacity="1.0"/>
+<text x="743.6" y="347.2" text-anchor="middle" font-size="11">57</text>
+<rect x="771.2" y="100.2" width="55.3" height="274.8" fill="#2fb37e" opacity="0.35"/>
+<text x="798.9" y="94.2" text-anchor="middle" font-size="11">724</text>
+<text x="771.2" y="399" text-anchor="middle" font-size="13">NorMuon</text>
+<text x="32" y="210.0" transform="rotate(-90 32 210.0)" text-anchor="middle" font-size="13">MiB</text>
+<rect x="80" y="416" width="14" height="14" fill="#cfcfcf"/><text x="100" y="428" font-size="12">Optimizer state (solid)</text>
+<rect x="270" y="416" width="14" height="14" fill="#cfcfcf" opacity=".35"/><text x="290" y="428" font-size="12">Peak allocated VRAM (light)</text>
+</svg>

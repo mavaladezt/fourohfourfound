@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+<rect width="100%" height="100%" fill="#0a0a0a"/>
+<style>text{font-family:system-ui,sans-serif;fill:#ededed}.axis{stroke:#4a4a4a}.grid{stroke:#1f1f1f}</style>
+<text x="450" y="22" text-anchor="middle" font-size="18" font-weight="600">Held-out validation loss versus tokens</text>
+<line class="grid" x1="75" y1="470.0" x2="875" y2="470.0"/>
+<text x="65" y="474.0" text-anchor="end" font-size="12">0.53</text>
+<line class="grid" x1="75" y1="383.0" x2="875" y2="383.0"/>
+<text x="65" y="387.0" text-anchor="end" font-size="12">0.91</text>
+<line class="grid" x1="75" y1="296.0" x2="875" y2="296.0"/>
+<text x="65" y="300.0" text-anchor="end" font-size="12">1.29</text>
+<line class="grid" x1="75" y1="209.0" x2="875" y2="209.0"/>
+<text x="65" y="213.0" text-anchor="end" font-size="12">1.67</text>
+<line class="grid" x1="75" y1="122.0" x2="875" y2="122.0"/>
+<text x="65" y="126.0" text-anchor="end" font-size="12">2.05</text>
+<line class="grid" x1="75" y1="35.0" x2="875" y2="35.0"/>
+<text x="65" y="39.0" text-anchor="end" font-size="12">2.43</text>
+<line class="grid" x1="75.0" y1="35" x2="75.0" y2="470"/>
+<text x="75.0" y="492" text-anchor="middle" font-size="12">1.0M</text>
+<line class="grid" x1="235.0" y1="35" x2="235.0" y2="470"/>
+<text x="235.0" y="492" text-anchor="middle" font-size="12">2.9M</text>
+<line class="grid" x1="395.0" y1="35" x2="395.0" y2="470"/>
+<text x="395.0" y="492" text-anchor="middle" font-size="12">4.7M</text>
+<line class="grid" x1="555.0" y1="35" x2="555.0" y2="470"/>
+<text x="555.0" y="492" text-anchor="middle" font-size="12">6.6M</text>
+<line class="grid" x1="715.0" y1="35" x2="715.0" y2="470"/>
+<text x="715.0" y="492" text-anchor="middle" font-size="12">8.4M</text>
+<line class="grid" x1="875.0" y1="35" x2="875.0" y2="470"/>
+<text x="875.0" y="492" text-anchor="middle" font-size="12">10.2M</text>
+<line class="axis" x1="75" y1="470" x2="875" y2="470"/>
+<line class="axis" x1="75" y1="35" x2="75" y2="470"/>
+<text x="475.0" y="522" text-anchor="middle" font-size="14">Training tokens</text>
+<polyline points="75.0,65.0 163.9,176.4 252.8,263.4 341.7,305.9 430.6,332.3 519.4,351.0 608.3,367.7 697.2,377.8 786.1,383.6 875.0,385.1" fill="none" stroke="#7d7d7d" stroke-width="3"/>
+<circle cx="75.0" cy="65.0" r="3" fill="#7d7d7d"/>
+<circle cx="163.9" cy="176.4" r="3" fill="#7d7d7d"/>
+<circle cx="252.8" cy="263.4" r="3" fill="#7d7d7d"/>
+<circle cx="341.7" cy="305.9" r="3" fill="#7d7d7d"/>
+<circle cx="430.6" cy="332.3" r="3" fill="#7d7d7d"/>
+<circle cx="519.4" cy="351.0" r="3" fill="#7d7d7d"/>
+<circle cx="608.3" cy="367.7" r="3" fill="#7d7d7d"/>
+<circle cx="697.2" cy="377.8" r="3" fill="#7d7d7d"/>
+<circle cx="786.1" cy="383.6" r="3" fill="#7d7d7d"/>
+<circle cx="875.0" cy="385.1" r="3" fill="#7d7d7d"/>
+<line x1="75" y1="494" x2="99" y2="494" stroke="#7d7d7d" stroke-width="3"/>
+<text x="105" y="499" font-size="13">AdamW</text>
+<polyline points="75.0,69.7 163.9,193.1 252.8,277.4 341.7,320.2 430.6,347.3 519.4,365.4 608.3,381.6 697.2,394.1 786.1,400.2 875.0,401.5" fill="none" stroke="#5b8def" stroke-width="3"/>
+<circle cx="75.0" cy="69.7" r="3" fill="#5b8def"/>
+<circle cx="163.9" cy="193.1" r="3" fill="#5b8def"/>
+<circle cx="252.8" cy="277.4" r="3" fill="#5b8def"/>
+<circle cx="341.7" cy="320.2" r="3" fill="#5b8def"/>
+<circle cx="430.6" cy="347.3" r="3" fill="#5b8def"/>
+<circle cx="519.4" cy="365.4" r="3" fill="#5b8def"/>
+<circle cx="608.3" cy="381.6" r="3" fill="#5b8def"/>
+<circle cx="697.2" cy="394.1" r="3" fill="#5b8def"/>
+<circle cx="786.1" cy="400.2" r="3" fill="#5b8def"/>
+<circle cx="875.0" cy="401.5" r="3" fill="#5b8def"/>
+<line x1="265" y1="494" x2="289" y2="494" stroke="#5b8def" stroke-width="3"/>
+<text x="295" y="499" font-size="13">8-bit AdamW</text>
+<polyline points="75.0,190.7 163.9,261.8 252.8,307.1 341.7,328.3 430.6,348.5 519.4,368.2 608.3,394.0 697.2,413.4 786.1,429.4 875.0,434.1" fill="none" stroke="#e09b3d" stroke-width="3"/>
+<circle cx="75.0" cy="190.7" r="3" fill="#e09b3d"/>
+<circle cx="163.9" cy="261.8" r="3" fill="#e09b3d"/>
+<circle cx="252.8" cy="307.1" r="3" fill="#e09b3d"/>
+<circle cx="341.7" cy="328.3" r="3" fill="#e09b3d"/>
+<circle cx="430.6" cy="348.5" r="3" fill="#e09b3d"/>
+<circle cx="519.4" cy="368.2" r="3" fill="#e09b3d"/>
+<circle cx="608.3" cy="394.0" r="3" fill="#e09b3d"/>
+<circle cx="697.2" cy="413.4" r="3" fill="#e09b3d"/>
+<circle cx="786.1" cy="429.4" r="3" fill="#e09b3d"/>
+<circle cx="875.0" cy="434.1" r="3" fill="#e09b3d"/>
+<line x1="455" y1="494" x2="479" y2="494" stroke="#e09b3d" stroke-width="3"/>
+<text x="485" y="499" font-size="13">Muon</text>
+<polyline points="75.0,206.9 163.9,313.2 252.8,340.9 341.7,362.2 430.6,378.0 519.4,391.6 608.3,409.5 697.2,424.9 786.1,436.5 875.0,440.0" fill="none" stroke="#2fb37e" stroke-width="3"/>
+<circle cx="75.0" cy="206.9" r="3" fill="#2fb37e"/>
+<circle cx="163.9" cy="313.2" r="3" fill="#2fb37e"/>
+<circle cx="252.8" cy="340.9" r="3" fill="#2fb37e"/>
+<circle cx="341.7" cy="362.2" r="3" fill="#2fb37e"/>
+<circle cx="430.6" cy="378.0" r="3" fill="#2fb37e"/>
+<circle cx="519.4" cy="391.6" r="3" fill="#2fb37e"/>
+<circle cx="608.3" cy="409.5" r="3" fill="#2fb37e"/>
+<circle cx="697.2" cy="424.9" r="3" fill="#2fb37e"/>
+<circle cx="786.1" cy="436.5" r="3" fill="#2fb37e"/>
+<circle cx="875.0" cy="440.0" r="3" fill="#2fb37e"/>
+<line x1="645" y1="494" x2="669" y2="494" stroke="#2fb37e" stroke-width="3"/>
+<text x="675" y="499" font-size="13">NorMuon</text>
+</svg>
